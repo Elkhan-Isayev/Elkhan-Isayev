@@ -114,8 +114,8 @@ A clean and object-oriented implementation of Conway’s Game of Life.
 A modular Order Management System — part of a broader OMS ecosystem.  
 Features: clean domain structure, RESTful services, and scalable design.
 
-#### 🧮 [currency-calculator-js](https://github.com/Elkhan-Isayev/currency-calculator-js)
-A lightweight JS app that dynamically calculates currency exchange values using up-to-date conversion rates.
+#### 🎮 [console-game-snake](https://github.com/Elkhan-Isayev/console-game-snake)
+Retro snake game built in C++—lightweight and addictive!
 
 #### 🧠 [spring-boot-via-kafka](https://github.com/Elkhan-Isayev/spring-boot-via-kafka)
 An event-driven demo with Kafka producers and consumers. Great for anyone learning Kafka with Java.
