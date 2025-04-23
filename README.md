@@ -101,31 +101,6 @@ React, Angular, Vue.js, jQuery, HTML5, CSS3, Bootstrap
   </a>
 </p>
 
-
-**Architectures & Patterns:**  
-REST, SOAP, gRPC, WebSocket, SignalR, JWT & Cookie Auth, CQRS, Modular Monolith, Event-driven
-
-**Messaging & APIs:**  
-Kafka, RabbitMQ, Swagger, OpenAPI
-
-**Databases:**  
-Oracle, PostgreSQL, MySQL, MS SQL, MongoDB, Redis, Elasticsearch
-
-**Cloud & Infrastructure:**  
-AWS, Docker, Kubernetes, Firebase, Keycloak, MinIO, NGINX
-
-**Monitoring:**  
-Dynatrace, Prometheus, Grafana, ELK Stack, Log4j
-
-**DevOps & CI/CD:**  
-Git, GitLab CI, Jenkins, Flyway, Liquibase, Bash
-
-**Testing:**  
-Unit, Integration, Regression, Selenium, Postman
-
-**Soft Skills:**  
-Agile, Documentation, Teamwork, Communication, Problem-solving
-
 ---
 
 ### 🚀 Featured Projects
