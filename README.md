@@ -1,9 +1,10 @@
 # 👋 Hi, I'm Elkhan Isayev
 
-### 💻 Senior Software Engineer | Distributed Systems Enthusiast | OSS Contributor
+### 💻 Senior Software Engineer & Technical Advisor | Distributed Systems Enthusiast | OSS Contributor
 
 * 🌍 Based in Baku, Azerbaijan
 * 🧑‍💼 Experienced in technical leadership — driving architecture decisions, mentoring engineers, and shipping production microservices
+* 🧭 Technical advisor — guiding teams on architecture, scalability, and engineering best practices
 * 📬 Email: is.elxan@gmail.com
 * 🐦 Twitter: [@ElkhanIsayev](https://twitter.com/ElkhanIsayev)
 * 🚀 Currently building resilient, event-driven microservices in Java & Go
