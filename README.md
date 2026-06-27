@@ -6,7 +6,6 @@
 * 🧑‍💼 Experienced in technical leadership — driving architecture decisions, mentoring engineers, and shipping production microservices
 * 🧭 Technical advisor — guiding teams on architecture, scalability, and engineering best practices
 * 📬 Email: is.elxan@gmail.com
-* 🐦 Twitter: [@ElkhanIsayev](https://twitter.com/ElkhanIsayev)
 * 🚀 Currently building resilient, event-driven microservices in Java & Go
 * 🧠 Exploring: Kubernetes, Cloud Design Patterns, and High-Performance Messaging
 * ⚡ Night owl productivity: 2AM code sessions are 🔥
@@ -17,9 +16,6 @@
     </a>
     <a href="https://leetcode.com/u/Elkhan99/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" alt="LeetCode"/>
-    </a>
-    <a href="https://www.twitter.com/elkhanisayev" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/twitter/follow/ElkhanIsayev?style=for-the-badge&logo=twitter&logoColor=white&color=1DA1F2" alt="Twitter"/>
     </a>
 </p>
 
