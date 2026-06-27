@@ -1,27 +1,39 @@
 # 👋 Hi, I'm Elkhan Isayev
 
-### 💻 Java Backend Developer | Distributed Systems Enthusiast | OSS Contributor
+### 💻 Tech Lead & Backend Engineer | Distributed Systems Enthusiast | OSS Contributor
 
-* 🌍 Based in Baku, Azerbaijan  
-* 📬 Email: is.elxan@gmail.com  
-* 🐦 Twitter: [@ElkhanIsayev](https://twitter.com/ElkhanIsayev)  
-* 🚀 Currently building resilient microservices and exploring system architecture  
-* 🧠 Learning: Kubernetes, Cloud Design Patterns, and High-Performance Messaging  
+* 🌍 Based in Baku, Azerbaijan
+* 🧑‍💼 Tech Lead — driving architecture, mentoring engineers, and shipping production microservices
+* 📬 Email: is.elxan@gmail.com
+* 🐦 Twitter: [@ElkhanIsayev](https://twitter.com/ElkhanIsayev)
+* 🚀 Currently building resilient, event-driven microservices in Java & Go
+* 🧠 Exploring: Kubernetes, Cloud Design Patterns, and High-Performance Messaging
 * ⚡ Night owl productivity: 2AM code sessions are 🔥
 
-<a href="https://www.twitter.com/elkhanisayev" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/twitter/follow/elkhanisayev?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="Basic img"/>
-</a>
+<p>
+    <a href="https://www.linkedin.com/in/elkhanisayev/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    </a>
+    <a href="https://leetcode.com/u/Elkhan99/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" alt="LeetCode"/>
+    </a>
+    <a href="https://www.twitter.com/elkhanisayev" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/twitter/follow/ElkhanIsayev?style=for-the-badge&logo=twitter&logoColor=white&color=1DA1F2" alt="Twitter"/>
+    </a>
+</p>
 
 ---
 
 ### 🛠 Tech Stack
 
-**Languages:**  
-Java, TypeScript, JavaScript, C#, C/C++, SQL, PL/SQL, PHP
+**Languages:**
+Java, Go, TypeScript, JavaScript, C#, C/C++, SQL, PL/SQL, PHP
 <p align="left">
   <a href="https://www.java.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="36" height="36" alt="Java" />
+  </a>
+  <a href="https://go.dev/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" width="36" height="36" alt="Go" />
   </a>
   <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="36" height="36" alt="TypeScript" />
@@ -46,36 +58,33 @@ Java, TypeScript, JavaScript, C#, C/C++, SQL, PL/SQL, PHP
   </a>
 </p>
 
-**Backend Frameworks & Platforms:**  
-Spring Boot, Spring Security, Hibernate, Camunda BPMN, .NET, Node.js, NestJS, Laravel
+**Backend Frameworks & Platforms:**
+Spring Boot, Spring Security, Hibernate, Camunda BPMN, Gin, .NET, Node.js, NestJS, Laravel
 <p align="left">
   <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" width="36" height="36" alt="Spring Boot" />
   </a>
-  <a href="https://spring.io/projects/spring-security" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" width="36" height="36" alt="Spring Security" />
-  </a>
   <a href="https://hibernate.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg" width="36" height="36" alt="Hibernate" />
   </a>
-<a href="https://camunda.com/" target="_blank" rel="noreferrer">
-  <img src="https://vectorlogo.zone/logos/camunda/camunda-icon.svg" width="36" height="36" alt="Camunda" />
-</a>
+  <a href="https://camunda.com/" target="_blank" rel="noreferrer">
+    <img src="https://vectorlogo.zone/logos/camunda/camunda-icon.svg" width="36" height="36" alt="Camunda" />
+  </a>
   <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original.svg" width="36" height="36" alt=".NET" />
   </a>
   <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="36" height="36" alt="Node.js" />
   </a>
-    <a href="https://nestjs.com/" target="_blank" rel="noreferrer">
-      <img src="https://vectorlogo.zone/logos/nestjs/nestjs-icon.svg" width="36" height="36" alt="NestJS" />
-    </a>
-    <a href="https://laravel.com/" target="_blank" rel="noreferrer">
-      <img src="https://vectorlogo.zone/logos/laravel/laravel-icon.svg" width="36" height="36" alt="Laravel" />
-    </a>
+  <a href="https://nestjs.com/" target="_blank" rel="noreferrer">
+    <img src="https://vectorlogo.zone/logos/nestjs/nestjs-icon.svg" width="36" height="36" alt="NestJS" />
+  </a>
+  <a href="https://laravel.com/" target="_blank" rel="noreferrer">
+    <img src="https://vectorlogo.zone/logos/laravel/laravel-icon.svg" width="36" height="36" alt="Laravel" />
+  </a>
 </p>
 
-**Frontend Frameworks:**  
+**Frontend Frameworks:**
 React, Angular, Vue.js, jQuery, HTML5, CSS3, Bootstrap
 <p align="left">
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
@@ -101,38 +110,69 @@ React, Angular, Vue.js, jQuery, HTML5, CSS3, Bootstrap
   </a>
 </p>
 
+**Infrastructure & Messaging:**
+Docker, Kubernetes, Apache Kafka, PostgreSQL, Redis, Git
+<p align="left">
+  <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="36" height="36" alt="Docker" />
+  </a>
+  <a href="https://kubernetes.io/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" width="36" height="36" alt="Kubernetes" />
+  </a>
+  <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg" width="36" height="36" alt="Apache Kafka" />
+  </a>
+  <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" width="36" height="36" alt="PostgreSQL" />
+  </a>
+  <a href="https://redis.io/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" width="36" height="36" alt="Redis" />
+  </a>
+  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="36" height="36" alt="Git" />
+  </a>
+</p>
+
 ---
 
 ### 🚀 Featured Projects
 
+#### 🧠 [spring-boot-via-kafka](https://github.com/Elkhan-Isayev/spring-boot-via-kafka) ⭐
+Event-driven demo with Spring Boot, Apache Kafka producers & consumers, and Docker.
+A clean reference for anyone learning event streaming with Java.
+
+#### 🎮 [cs16-web](https://github.com/Elkhan-Isayev/cs16-web)
+Counter-Strike 1.6 playable right in the browser over LAN — one Docker container, share a link, no installs.
+Built with WebRTC + Xash3D compiled to WebAssembly.
+
+#### 📊 [AzPulse](https://github.com/Elkhan-Isayev/azpulse) · [Live Demo](https://elkhan-isayev.github.io/azpulse/)
+Live dashboard over Azerbaijan's national open data (opendata.az) — real-time country metrics and
+market-demand signals. Pure static site, no backend.
+
 #### 🧩 [Game of Life](https://github.com/Elkhan-Isayev/game-of-life)
-A clean and object-oriented implementation of Conway’s Game of Life.  
-✔️ Infinite loop handling • 📦 MVC separation • 🧪 Includes testable logic
+A clean, object-oriented implementation of Conway's Game of Life with MVC separation and testable logic.
 
-#### 📦 [oms-core](https://github.com/Elkhan-Isayev/oms-core)
-#### 📦 [oms-front](https://github.com/Elkhan-Isayev/oms-front)
-A modular Order Management System — part of a broader OMS ecosystem.  
-Features: clean domain structure, RESTful services, and scalable design.
+#### 🕹 [java-tetris](https://github.com/Elkhan-Isayev/java-tetris)
+A compact, classic Tetris built from scratch in Java.
 
-#### 🎮 [console-game-snake](https://github.com/Elkhan-Isayev/console-game-snake)
-Retro snake game built in C++—lightweight and addictive!
+#### ♟ [chess-unity](https://github.com/Elkhan-Isayev/chess-unity)
+A playable chess game built on the Unity engine.
 
-#### 🧠 [spring-boot-via-kafka](https://github.com/Elkhan-Isayev/spring-boot-via-kafka)
-An event-driven demo with Kafka producers and consumers. Great for anyone learning Kafka with Java.
+#### 📈 [investment-platform-js](https://github.com/Elkhan-Isayev/investment-platform-js)
+Collaborative app for analyzing stock-price change statistics — built together with a small team.
 
-#### 🧱 [loading...](loading...)
-loading..
+> 📂 Plus a collection of smaller projects: snake (C++), QR encoder/decoder, currency & deposit calculators, a coins catalog, and more — explore the [repositories tab](https://github.com/Elkhan-Isayev?tab=repositories).
 
 ---
 
 ### 📈 GitHub Stats
 
-![Elkhan's GitHub stats](https://github-readme-stats.vercel.app/api?username=Elkhan-Isayev&show_icons=true&theme=default)  
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Elkhan-Isayev&theme=default)
-
----
-
-### 🌐 Let's Connect!
-
-- [LinkedIn](https://www.linkedin.com/in/elkhanisayev/)
-- [Twitter](https://twitter.com/ElkhanIsayev)
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=Elkhan-Isayev&show_icons=true&theme=default" alt="Elkhan's GitHub stats" />
+</p>
+<p align="left">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Elkhan-Isayev&theme=default" alt="GitHub Streak" />
+</p>
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Elkhan-Isayev&layout=compact&theme=default" alt="Top Languages" />
+</p>
