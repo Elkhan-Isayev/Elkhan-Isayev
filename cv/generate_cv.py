@@ -167,12 +167,20 @@ def job(company, meta, roles):
 SUMMARY = (
     "Senior Software Engineer with experience in the IT industry since 2016, specializing in high-load "
     "and enterprise-grade systems. Proven track record leading technical direction, designing scalable "
-    "microservice architectures, and delivering reliable, maintainable solutions with a strong emphasis "
-    "on code quality and system reliability. Polyglot engineer working across Go, Java, and PHP, "
-    "comfortable owning the full SDLC in fast-paced environments and complex problem spaces."
+    "microservice architectures, and delivering reliable, maintainable solutions. Polyglot engineer "
+    "across Go, Java, and PHP who runs agentic coding tools as part of everyday delivery and builds for "
+    "them: Erebus, an open-source MCP server exposing 51 tools to AI agents."
 )
 
 SKILLS = [
+    (
+        "AI Tooling",
+        "Claude Code, Cursor, and GitHub Copilot on production work; agent-assisted review and refactoring",
+    ),
+    (
+        "Agentic Engineering",
+        "Model Context Protocol (MCP) servers, multi-agent workflows, tool design for coding agents",
+    ),
     ("Languages", "Go, Java, PHP, C#, TypeScript, JavaScript, SQL / PL-SQL"),
     ("Frameworks", "Spring Boot, Node.js, .NET Core, Angular, React.js, Electron, Laravel"),
     ("Messaging &amp; Data", "Apache Kafka, RabbitMQ, Redis, Elasticsearch, Avro, Oracle"),
@@ -189,9 +197,9 @@ JOBS = [
             [
                 "Develop backend services across <b>Go</b>, <b>Java</b>, and <b>PHP</b>, contributing to core platform features and integrations.",
                 "Delivered a production integration with a <b>Kazakhstani bank</b> for cross-border payments and banking.",
-                "Authored shared libraries for <b>Apache Kafka</b> messaging and standardized logging, improving cross-service consistency.",
-                "Established <b>SDLC</b> processes and configured monitoring and <b>alerting</b> to strengthen system observability and reliability.",
-                "Set up and rolled out a company-wide <b>Wiki.js</b> internal documentation portal, centralizing engineering and process knowledge.",
+                "Authored shared libraries for <b>Apache Kafka</b> messaging and standardized logging across services.",
+                "Established <b>SDLC</b> processes and configured monitoring and <b>alerting</b> to strengthen observability.",
+                "Rolled out a company-wide <b>Wiki.js</b> documentation portal, centralizing engineering knowledge.",
             ],
         )],
     ),
@@ -202,7 +210,7 @@ JOBS = [
             (
                 "Technical Advisor", "Feb 2026 – Present",
                 [
-                    "Advise on iOS and Android production release processes, ensuring smooth App Store Connect and Google Play Console submissions.",
+                    "Advise on iOS and Android production releases, App Store Connect and Google Play submissions.",
                     "Guide preparation of app store assets, metadata, and compliance, and support Firebase Cloud Messaging and mobile build configuration.",
                 ],
             ),
@@ -288,8 +296,8 @@ PROJECTS = [
         "Erebus",
         [("https://elkhan-isayev.github.io/erebus/", "elkhan-isayev.github.io/erebus")],
         "Open-source Electron desktop client for Apache Kafka and RabbitMQ: live tailing at 1,000+ msg/s, "
-        "Avro/Protobuf decoding, Schema Registry, consumer-group lag, ksqlDB, and an MCP server with 51 tools "
-        "for AI agents.",
+        "Avro/Protobuf decoding, Schema Registry, consumer-group lag, and ksqlDB, plus an MCP server whose "
+        "51 tools let coding agents drive brokers.",
     ),
     (
         "Hubpoint.AI",
@@ -350,7 +358,9 @@ PDF_KEYWORDS = (
     "Senior Software Engineer, Backend Engineer, Technical Lead, Go, Golang, Java, Spring Boot, PHP, C#, .NET Core, "
     "TypeScript, Node.js, React, Angular, Electron, Apache Kafka, RabbitMQ, Redis, Elasticsearch, Oracle, PL/SQL, "
     "Docker, Kubernetes, CI/CD, Camunda, microservices, distributed systems, event-driven architecture, high-load, "
-    "system design, REST API, observability, SDLC, fintech, banking, payments"
+    "system design, REST API, observability, SDLC, fintech, banking, payments, Claude Code, Cursor, "
+    "GitHub Copilot, agentic coding, AI-assisted development, Model Context Protocol, MCP server, "
+    "multi-agent workflows, coding agents"
 )
 
 
@@ -442,7 +452,7 @@ def build():
         bottomMargin=MARGIN_Y,
         title="Elkhan Isayev - CV",
         author="Elkhan Isayev",
-        subject="Senior Software Engineer - Go, Java, PHP, microservices, high-load distributed systems",
+        subject="Senior Software Engineer - agentic coding workflows, MCP tooling, Go/Java backend, high-load systems",
         keywords=PDF_KEYWORDS,
     )
     frame = Frame(
