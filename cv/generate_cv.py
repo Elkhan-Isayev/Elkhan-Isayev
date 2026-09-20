@@ -204,34 +204,16 @@ JOBS = [
         )],
     ),
     (
-        "Hubpoint.AI",
-        "AI-Powered Appointment Scheduling Platform · Remote · Part-time",
-        [
-            (
-                "Technical Advisor", "Feb 2026 – Present",
-                [
-                    "Advise on iOS and Android production releases, App Store Connect and Google Play submissions.",
-                    "Guide preparation of app store assets, metadata, and compliance, and support Firebase Cloud Messaging and mobile build configuration.",
-                ],
-            ),
-            (
-                "Technical Lead", "May 2025 – Feb 2026",
-                [
-                    "Led the technical direction of the platform across mobile, backend, infrastructure, DevOps, and AI workstreams.",
-                    "Defined architectural separation to improve maintainability and scalability, and established SDLC processes for efficient delivery and production readiness.",
-                ],
-            ),
-        ],
-    ),
-    (
         "Deviofy FZCO",
-        "Remote · Full-time",
+        "Dubai, UAE · Remote · Full-time",
         [(
             "Technical Lead", "Jan 2025 – Mar 2026",
             [
-                "Led end-to-end development and feature delivery across multiple projects.",
+                "Led end-to-end development and feature delivery across multiple B2B2C products in the hospitality, live-entertainment, and creator-economy verticals.",
+                "Designed the system architecture of a two-sided restaurant dining marketplace: discovery and booking flow, on-site redemption codes, a partner-facing analytics dashboard, and a reputation-based ranking model driving venue visibility.",
+                "Designed the architecture of a real-time audience-engagement platform for live performers and event hosts: QR-based guest access with no sign-up, a live request queue with voting and paid prioritization, and tiered subscription plans.",
                 "Managed cross-functional teams spanning Backend, Frontend, and QA to ensure seamless collaboration.",
-                "Built and integrated <b>Stripe</b> monetization to enable new revenue streams.",
+                "Built and integrated <b>Stripe</b> monetization — subscription billing and one-off in-app purchases — to enable new revenue streams.",
             ],
         )],
     ),
