@@ -10,13 +10,13 @@
 </style>
 <rect x="0.5" y="0.5" rx="6" width="494" height="194" fill="#ffffff" stroke="#d0d7de"/>
 <text x="25" y="38" class="title">Recent Activity</text>
-<text x="470" y="38" class="muted" text-anchor="end">183 contributions in 16 weeks</text>
+<text x="470" y="38" class="muted" text-anchor="end">197 contributions in 16 weeks</text>
 <line x1="25" y1="160.5" x2="470" y2="160.5" stroke="#eaeef2"/>
 <path fill="#1a7f37" d="M28.0,160 V146.8 Q28.0,142.8 32.0,142.8 H45.8 Q49.8,142.8 49.8,146.8 V160 Z"><title>Week of Jun 14: 9 contributions</title></path>
 <text x="28.0" y="178" class="muted">Jun 14</text>
 <path fill="#1a7f37" d="M55.8,160 V80.0 Q55.8,76.0 59.8,76.0 H73.6 Q77.6,76.0 77.6,80.0 V160 Z"><title>Week of Jun 21: 44 contributions</title></path>
 <text x="66.7" y="70.0" class="muted" text-anchor="middle">44</text>
-<path fill="#1a7f37" d="M83.6,160 V118.2 Q83.6,114.2 87.6,114.2 H101.4 Q105.4,114.2 105.4,118.2 V160 Z"><title>Week of Jun 28: 24 contributions</title></path>
+<path fill="#1a7f37" d="M83.6,160 V116.3 Q83.6,112.3 87.6,112.3 H101.4 Q105.4,112.3 105.4,116.3 V160 Z"><title>Week of Jun 28: 25 contributions</title></path>
 <path fill="#1a7f37" d="M111.4,160 V152.5 Q111.4,148.5 115.4,148.5 H129.2 Q133.2,148.5 133.2,152.5 V160 Z"><title>Week of Jul 5: 6 contributions</title></path>
 <path fill="#1a7f37" d="M139.2,160 V102.9 Q139.2,98.9 143.2,98.9 H157.1 Q161.1,98.9 161.1,102.9 V160 Z"><title>Week of Jul 12: 32 contributions</title></path>
 <text x="139.2" y="178" class="muted">Jul 12</text>
@@ -27,5 +27,5 @@
 <text x="250.5" y="178" class="muted">Aug 9</text>
 <text x="361.8" y="178" class="muted">Sep 6</text>
 <path fill="#1a7f37" d="M389.6,160 V160.0 Q389.6,156.0 393.6,156.0 H407.4 Q411.4,156.0 411.4,160.0 V160 Z"><title>Week of Sep 13: 1 contributions</title></path>
-<path fill="#1a7f37" d="M417.4,160 V137.3 Q417.4,133.3 421.4,133.3 H435.2 Q439.2,133.3 439.2,137.3 V160 Z"><title>Week of Sep 20: 14 contributions</title></path>
+<path fill="#1a7f37" d="M417.4,160 V112.5 Q417.4,108.5 421.4,108.5 H435.2 Q439.2,108.5 439.2,112.5 V160 Z"><title>Week of Sep 20: 27 contributions</title></path>
 </svg>
