@@ -1,15 +1,15 @@
 # 👋 Hi, I'm Elkhan Isayev
 
-### 💻 Senior Software Engineer & Technical Advisor | Distributed Systems | Agentic Engineering | OSS Contributor
+### 💻 Senior Software Engineer | Former Technical Lead | Distributed Systems & Agentic Engineering
 
-* 🌍 Based in Baku, Azerbaijan
-* 🧑‍💼 Experienced in technical leadership — driving architecture decisions, mentoring engineers, and shipping production microservices
-* 🧭 Technical advisor — guiding teams on architecture, scalability, and engineering best practices
-* 📬 Email: is.elxan@gmail.com
-* 🚀 Currently building resilient, event-driven microservices in Java & Go
-* 🤖 Agentic coding is part of my everyday delivery — Claude Code, Cursor and Copilot on production work, and I build tools for coding agents too: [Erebus](https://github.com/Elkhan-Isayev/erebus) ships an MCP server with 51 tools
-* 🧠 Exploring: Kubernetes, Cloud Design Patterns, High-Performance Messaging, and multi-agent workflows
-* ⚡ Night owl productivity: 2AM code sessions are 🔥
+Building high-load and enterprise-grade systems since 2016 — mostly fintech and banking. I lead technical direction,
+design microservice architectures, and ship reliable, maintainable software across Go, Java and PHP.
+
+* 🏦 **Now:** Senior Software Engineer at **Push30** — backend services in Go, Java and PHP, a cross-border payments integration with a Kazakhstani bank, shared Kafka messaging and logging libraries, SDLC and alerting
+* 🧭 **Before:** Technical Lead at **Deviofy** (Dubai) — architecture of B2B2C marketplaces and real-time platforms; Technical Lead and Senior Engineer at **Kapital Bank** — microservice decomposition, Kubernetes migration, mobile banking integrated with the credit system via Camunda, Kafka streaming into the data warehouse
+* 🤖 **Agentic engineering:** Claude Code, Cursor and Copilot are part of everyday delivery, and I build tools for coding agents — [Erebus](https://github.com/Elkhan-Isayev/erebus) ships an MCP server with 51 tools
+* 🧠 **Focus:** event-driven microservices, system design, high-load messaging (Kafka, RabbitMQ), observability
+* 📬 **Contact:** [is.elxan@gmail.com](mailto:is.elxan@gmail.com) · Baku, Azerbaijan
 
 <p>
     <a href="https://www.linkedin.com/in/elkhanisayev/" target="_blank" rel="noreferrer">
@@ -161,10 +161,6 @@ schemas, connectors and bindings, keep `kubectl port-forward`s alive in built-in
 Autonomous forex trader for MetaTrader 5: technical analysis feeds **Claude**, which proposes the trade — and a
 deterministic risk engine has final authority over the AI. TypeScript / Node.js, SQLite audit trail, kill-switch, dashboard.
 
-#### 🛡 [cve-scanner](https://github.com/Elkhan-Isayev/cve-scanner)
-Full-stack CVE scanner over a real-time NVD 2.0 feed: SemVer-aware version-range matching, an interactive React Flow graph
-of findings, and a downloadable PDF report with remediation advice. Dockerised, 43 tests.
-
 #### 🧠 [spring-boot-via-kafka](https://github.com/Elkhan-Isayev/spring-boot-via-kafka) ⭐
 Event-driven demo with Spring Boot, Apache Kafka producers & consumers, and Docker.
 A clean reference for anyone learning event streaming with Java.
@@ -231,7 +227,11 @@ Collaborative app for analyzing stock-price change statistics — built together
 </p>
 <p align="left">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=Elkhan-Isayev&theme=github-dark-blue&hide_border=false" />
-    <img src="https://streak-stats.demolab.com/?user=Elkhan-Isayev&theme=default" width="49%" alt="GitHub streak" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=Elkhan-Isayev&theme=github-dark-blue&border=30363D" />
+    <img src="https://streak-stats.demolab.com/?user=Elkhan-Isayev&theme=default&border=D0D7DE" width="49%" alt="GitHub streak" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+    <img src="assets/activity-light.svg" width="49%" alt="Contributions per week, last 16 weeks" />
   </picture>
 </p>

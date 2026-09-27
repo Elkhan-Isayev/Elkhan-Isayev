@@ -1,4 +1,4 @@
-"""Render the profile README's stats and top-languages cards as static SVGs.
+"""Render the profile README's stats, languages and activity cards as static SVGs.
 
 The public github-readme-stats instance on Vercel went down, so the cards are
 built here from the GitHub GraphQL API and committed to assets/ by the
@@ -10,7 +10,7 @@ Usage: GITHUB_TOKEN=... python .github/scripts/render_stats.py
 import json
 import os
 import urllib.request
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from html import escape
 from pathlib import Path
 
@@ -20,6 +20,7 @@ OUT_DIR = Path(__file__).resolve().parents[2] / "assets"
 # Markup, styling and build glue say little about what a repo is written in.
 HIDDEN_LANGUAGES = {"HTML", "CSS", "SCSS", "Shell", "Dockerfile", "Makefile", "GDShader"}
 TOP_LANGUAGES = 8
+ACTIVITY_WEEKS = 16
 
 THEMES = {
     "dark": {
@@ -29,6 +30,7 @@ THEMES = {
         "text": "#c9d1d9",
         "muted": "#8b949e",
         "track": "#21262d",
+        "bar": "#3fb950",
     },
     "light": {
         "bg": "#ffffff",
@@ -37,6 +39,7 @@ THEMES = {
         "text": "#1f2328",
         "muted": "#656d76",
         "track": "#eaeef2",
+        "bar": "#1a7f37",
     },
 }
 
@@ -71,18 +74,21 @@ def graphql(query, **variables):
 
 
 def fetch():
+    today = datetime.now(timezone.utc).date()
+    # Calendar weeks start on Sunday; the last one is the current, partial week.
+    first_week = today - timedelta(days=(today.weekday() + 1) % 7 + 7 * (ACTIVITY_WEEKS - 1))
+
     user = graphql(
         """
-        query($login: String!) {
+        query($login: String!, $since: DateTime!) {
           user(login: $login) {
             createdAt
             followers { totalCount }
             pullRequests { totalCount }
             issues { totalCount }
-            repositoriesContributedTo(
-              contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]
-              includeUserRepositories: false
-            ) { totalCount }
+            contributionsCollection(from: $since) {
+              contributionCalendar { weeks { contributionDays { date contributionCount } } }
+            }
             repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
               totalCount
               nodes {
@@ -96,6 +102,7 @@ def fetch():
         }
         """,
         login=LOGIN,
+        since=first_week.isoformat() + "T00:00:00Z",
     )["user"]
 
     # contributionsCollection spans at most one year, so ask for each year at once.
@@ -120,6 +127,14 @@ def fetch():
             entry = languages.setdefault(name, {"size": 0, "color": edge["node"]["color"] or "#8b949e"})
             entry["size"] += edge["size"]
 
+    weeks = {}
+    for week in user["contributionsCollection"]["contributionCalendar"]["weeks"]:
+        for day in week["contributionDays"]:
+            day_date = date.fromisoformat(day["date"])
+            if first_week <= day_date <= today:
+                start = day_date - timedelta(days=(day_date.weekday() + 1) % 7)
+                weeks[start] = weeks.get(start, 0) + day["contributionCount"]
+
     return {
         "stars": sum(repo["stargazerCount"] for repo in repos),
         "commits": sum(
@@ -128,9 +143,9 @@ def fetch():
         ),
         "prs": user["pullRequests"]["totalCount"],
         "issues": user["issues"]["totalCount"],
-        "contributed": user["repositoriesContributedTo"]["totalCount"],
         "repos": user["repositories"]["totalCount"],
         "followers": user["followers"]["totalCount"],
+        "weeks": sorted(weeks.items()),
         "languages": sorted(languages.items(), key=lambda item: -item[1]["size"]),
     }
 
@@ -161,7 +176,7 @@ def stats_card(stats, theme):
         ("pr", "Pull requests", stats["prs"]),
         ("issue", "Issues opened", stats["issues"]),
         ("repo", "Public repositories", stats["repos"]),
-        ("people", "Contributed to (last year)", stats["contributed"]),
+        ("people", "Followers", stats["followers"]),
     ]
     body = []
     for i, (icon, label, value) in enumerate(rows):
@@ -204,13 +219,50 @@ def languages_card(stats, theme):
     return card(theme, "Most Used Languages", "\n".join(body))
 
 
+def activity_card(stats, theme):
+    t = THEMES[theme]
+    weeks = stats["weeks"]
+    total = sum(count for _, count in weeks)
+    peak = max((count for _, count in weeks), default=0) or 1
+
+    left, right, baseline, top = 25, WIDTH - 25, 160, 76
+    slot = (right - left) / len(weeks)
+    bar_width = slot - 6
+    body = [
+        f'<text x="{right}" y="38" class="muted" text-anchor="end">{total:,} contributions in {len(weeks)} weeks</text>',
+        f'<line x1="{left}" y1="{baseline + 0.5}" x2="{right}" y2="{baseline + 0.5}" stroke="{t["track"]}"/>',
+    ]
+    peak_labelled = False
+    for i, (start, count) in enumerate(weeks):
+        x = left + i * slot + 3
+        label = f"{start:%b} {start.day}"
+        if count:
+            height = max(4, (baseline - top) * count / peak)
+            y = baseline - height
+            # Rounded top, square foot on the baseline.
+            body.append(
+                f'<path fill="{t["bar"]}" d="M{x:.1f},{baseline} V{y + 4:.1f} Q{x:.1f},{y:.1f} {x + 4:.1f},{y:.1f}'
+                f' H{x + bar_width - 4:.1f} Q{x + bar_width:.1f},{y:.1f} {x + bar_width:.1f},{y + 4:.1f} V{baseline} Z">'
+                f"<title>Week of {label}: {count} contributions</title></path>"
+            )
+            if count == peak and not peak_labelled:
+                peak_labelled = True
+                body.append(
+                    f'<text x="{x + bar_width / 2:.1f}" y="{y - 6:.1f}" class="muted" text-anchor="middle">{count}</text>'
+                )
+        if i % 4 == 0:
+            body.append(f'<text x="{x:.1f}" y="{baseline + 18}" class="muted">{label}</text>')
+    return card(theme, "Recent Activity", "\n".join(body))
+
+
 def main():
     stats = fetch()
     OUT_DIR.mkdir(exist_ok=True)
     for theme in THEMES:
         (OUT_DIR / f"stats-{theme}.svg").write_text(stats_card(stats, theme))
         (OUT_DIR / f"top-langs-{theme}.svg").write_text(languages_card(stats, theme))
-    print(json.dumps({k: v for k, v in stats.items() if k != "languages"}))
+        (OUT_DIR / f"activity-{theme}.svg").write_text(activity_card(stats, theme))
+    print(json.dumps({k: v for k, v in stats.items() if k not in ("languages", "weeks")}))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Recent Activity">
+<title>Recent Activity</title>
+<style>
+  text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; }
+  .title { font-size: 18px; font-weight: 600; fill: #58a6ff; }
+  .label { font-size: 14px; fill: #c9d1d9; }
+  .value { font-size: 14px; font-weight: 700; fill: #c9d1d9; }
+  .muted { font-size: 12px; fill: #8b949e; }
+  .icon { fill: #8b949e; }
+</style>
+<rect x="0.5" y="0.5" rx="6" width="494" height="194" fill="#0d1117" stroke="#30363d"/>
+<text x="25" y="38" class="title">Recent Activity</text>
+<text x="470" y="38" class="muted" text-anchor="end">184 contributions in 16 weeks</text>
+<line x1="25" y1="160.5" x2="470" y2="160.5" stroke="#21262d"/>
+<path fill="#3fb950" d="M28.0,160 V144.9 Q28.0,140.9 32.0,140.9 H45.8 Q49.8,140.9 49.8,144.9 V160 Z"><title>Week of Jun 14: 10 contributions</title></path>
+<text x="28.0" y="178" class="muted">Jun 14</text>
+<path fill="#3fb950" d="M55.8,160 V80.0 Q55.8,76.0 59.8,76.0 H73.6 Q77.6,76.0 77.6,80.0 V160 Z"><title>Week of Jun 21: 44 contributions</title></path>
+<text x="66.7" y="70.0" class="muted" text-anchor="middle">44</text>
+<path fill="#3fb950" d="M83.6,160 V118.2 Q83.6,114.2 87.6,114.2 H101.4 Q105.4,114.2 105.4,118.2 V160 Z"><title>Week of Jun 28: 24 contributions</title></path>
+<path fill="#3fb950" d="M111.4,160 V152.5 Q111.4,148.5 115.4,148.5 H129.2 Q133.2,148.5 133.2,152.5 V160 Z"><title>Week of Jul 5: 6 contributions</title></path>
+<path fill="#3fb950" d="M139.2,160 V102.9 Q139.2,98.9 143.2,98.9 H157.1 Q161.1,98.9 161.1,102.9 V160 Z"><title>Week of Jul 12: 32 contributions</title></path>
+<text x="139.2" y="178" class="muted">Jul 12</text>
+<path fill="#3fb950" d="M167.1,160 V154.5 Q167.1,150.5 171.1,150.5 H184.9 Q188.9,150.5 188.9,154.5 V160 Z"><title>Week of Jul 19: 5 contributions</title></path>
+<path fill="#3fb950" d="M194.9,160 V158.3 Q194.9,154.3 198.9,154.3 H212.7 Q216.7,154.3 216.7,158.3 V160 Z"><title>Week of Jul 26: 3 contributions</title></path>
+<path fill="#3fb950" d="M222.7,160 V80.0 Q222.7,76.0 226.7,76.0 H240.5 Q244.5,76.0 244.5,80.0 V160 Z"><title>Week of Aug 2: 44 contributions</title></path>
+<path fill="#3fb950" d="M250.5,160 V160.0 Q250.5,156.0 254.5,156.0 H268.3 Q272.3,156.0 272.3,160.0 V160 Z"><title>Week of Aug 9: 1 contributions</title></path>
+<text x="250.5" y="178" class="muted">Aug 9</text>
+<text x="361.8" y="178" class="muted">Sep 6</text>
+<path fill="#3fb950" d="M389.6,160 V160.0 Q389.6,156.0 393.6,156.0 H407.4 Q411.4,156.0 411.4,160.0 V160 Z"><title>Week of Sep 13: 1 contributions</title></path>
+<path fill="#3fb950" d="M417.4,160 V137.3 Q417.4,133.3 421.4,133.3 H435.2 Q439.2,133.3 439.2,137.3 V160 Z"><title>Week of Sep 20: 14 contributions</title></path>
+</svg>
