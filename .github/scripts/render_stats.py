@@ -10,7 +10,7 @@ Usage: GITHUB_TOKEN=... python .github/scripts/render_stats.py
 import json
 import os
 import urllib.request
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from html import escape
 from pathlib import Path
 
@@ -20,7 +20,6 @@ OUT_DIR = Path(__file__).resolve().parents[2] / "assets"
 # Markup, styling and build glue say little about what a repo is written in.
 HIDDEN_LANGUAGES = {"HTML", "CSS", "SCSS", "Shell", "Dockerfile", "Makefile", "GDShader"}
 TOP_LANGUAGES = 8
-ACTIVITY_WEEKS = 16
 
 THEMES = {
     "dark": {
@@ -75,8 +74,8 @@ def graphql(query, **variables):
 
 def fetch():
     today = datetime.now(timezone.utc).date()
-    # Calendar weeks start on Sunday; the last one is the current, partial week.
-    first_week = today - timedelta(days=(today.weekday() + 1) % 7 + 7 * (ACTIVITY_WEEKS - 1))
+    # The current month plus the eleven before it.
+    first_month = date(today.year - (today.month < 12), today.month % 12 + 1, 1)
 
     user = graphql(
         """
@@ -102,7 +101,7 @@ def fetch():
         }
         """,
         login=LOGIN,
-        since=first_week.isoformat() + "T00:00:00Z",
+        since=first_month.isoformat() + "T00:00:00Z",
     )["user"]
 
     # contributionsCollection spans at most one year, so ask for each year at once.
@@ -127,13 +126,14 @@ def fetch():
             entry = languages.setdefault(name, {"size": 0, "color": edge["node"]["color"] or "#8b949e"})
             entry["size"] += edge["size"]
 
-    weeks = {}
+    # The calendar pads its last week with future days, hence the upper bound.
+    months = {}
     for week in user["contributionsCollection"]["contributionCalendar"]["weeks"]:
         for day in week["contributionDays"]:
             day_date = date.fromisoformat(day["date"])
-            if first_week <= day_date <= today:
-                start = day_date - timedelta(days=(day_date.weekday() + 1) % 7)
-                weeks[start] = weeks.get(start, 0) + day["contributionCount"]
+            if first_month <= day_date <= today:
+                month = day_date.replace(day=1)
+                months[month] = months.get(month, 0) + day["contributionCount"]
 
     return {
         "stars": sum(repo["stargazerCount"] for repo in repos),
@@ -145,7 +145,7 @@ def fetch():
         "issues": user["issues"]["totalCount"],
         "repos": user["repositories"]["totalCount"],
         "followers": user["followers"]["totalCount"],
-        "weeks": sorted(weeks.items()),
+        "months": sorted(months.items()),
         "languages": sorted(languages.items(), key=lambda item: -item[1]["size"]),
     }
 
@@ -221,21 +221,21 @@ def languages_card(stats, theme):
 
 def activity_card(stats, theme):
     t = THEMES[theme]
-    weeks = stats["weeks"]
-    total = sum(count for _, count in weeks)
-    peak = max((count for _, count in weeks), default=0) or 1
+    months = stats["months"]
+    total = sum(count for _, count in months)
+    peak = max((count for _, count in months), default=0) or 1
 
     left, right, baseline, top = 25, WIDTH - 25, 160, 76
-    slot = (right - left) / len(weeks)
-    bar_width = slot - 6
+    slot = (right - left) / len(months)
+    bar_width = slot - 8
     body = [
-        f'<text x="{right}" y="38" class="muted" text-anchor="end">{total:,} contributions in {len(weeks)} weeks</text>',
+        f'<text x="{right}" y="38" class="muted" text-anchor="end">{total:,} in the last 12 months</text>',
         f'<line x1="{left}" y1="{baseline + 0.5}" x2="{right}" y2="{baseline + 0.5}" stroke="{t["track"]}"/>',
     ]
     peak_labelled = False
-    for i, (start, count) in enumerate(weeks):
-        x = left + i * slot + 3
-        label = f"{start:%b} {start.day}"
+    for i, (month, count) in enumerate(months):
+        x = left + i * slot + 4
+        label = f"{month:%b}"
         if count:
             height = max(4, (baseline - top) * count / peak)
             y = baseline - height
@@ -243,16 +243,17 @@ def activity_card(stats, theme):
             body.append(
                 f'<path fill="{t["bar"]}" d="M{x:.1f},{baseline} V{y + 4:.1f} Q{x:.1f},{y:.1f} {x + 4:.1f},{y:.1f}'
                 f' H{x + bar_width - 4:.1f} Q{x + bar_width:.1f},{y:.1f} {x + bar_width:.1f},{y + 4:.1f} V{baseline} Z">'
-                f"<title>Week of {label}: {count} contributions</title></path>"
+                f"<title>{month:%B %Y}: {count} contributions</title></path>"
             )
             if count == peak and not peak_labelled:
                 peak_labelled = True
                 body.append(
                     f'<text x="{x + bar_width / 2:.1f}" y="{y - 6:.1f}" class="muted" text-anchor="middle">{count}</text>'
                 )
-        if i % 4 == 0:
-            body.append(f'<text x="{x:.1f}" y="{baseline + 18}" class="muted">{label}</text>')
-    return card(theme, "Recent Activity", "\n".join(body))
+        body.append(
+            f'<text x="{x + bar_width / 2:.1f}" y="{baseline + 18}" class="muted" text-anchor="middle">{label}</text>'
+        )
+    return card(theme, "Contribution Activity", "\n".join(body))
 
 
 def main():
@@ -262,7 +263,7 @@ def main():
         (OUT_DIR / f"stats-{theme}.svg").write_text(stats_card(stats, theme))
         (OUT_DIR / f"top-langs-{theme}.svg").write_text(languages_card(stats, theme))
         (OUT_DIR / f"activity-{theme}.svg").write_text(activity_card(stats, theme))
-    print(json.dumps({k: v for k, v in stats.items() if k not in ("languages", "weeks")}))
+    print(json.dumps({k: v for k, v in stats.items() if k not in ("languages", "months")}))
 
 
 if __name__ == "__main__":

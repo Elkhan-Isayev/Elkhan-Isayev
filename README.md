@@ -232,6 +232,6 @@ Collaborative app for analyzing stock-price change statistics — built together
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-    <img src="assets/activity-light.svg" width="49%" alt="Contributions per week, last 16 weeks" />
+    <img src="assets/activity-light.svg" width="49%" alt="Contributions per month, last 12 months" />
   </picture>
 </p>
