@@ -168,8 +168,9 @@ SUMMARY = (
     "Senior Software Engineer with experience in the IT industry since 2016, specializing in high-load "
     "and enterprise-grade systems. Proven track record leading technical direction, designing scalable "
     "microservice architectures, and delivering reliable, maintainable solutions. Polyglot engineer "
-    "across Go, Java, and PHP who runs agentic coding tools as part of everyday delivery and builds for "
-    "them: Erebus, an open-source MCP server exposing 51 tools to AI agents."
+    "across Go, Java, and PHP who designs AI-powered systems (RAG pipelines, agentic workflows, and "
+    "automation of routine processes) and builds for coding agents: Erebus, an open-source MCP server "
+    "exposing 51 tools to AI agents."
 )
 
 SKILLS = [
@@ -178,8 +179,14 @@ SKILLS = [
         "Claude Code, Cursor, and GitHub Copilot on production work; agent-assisted review and refactoring",
     ),
     (
+        "AI Architecture",
+        "LLM-integrated backend services (OpenAI, Anthropic APIs), RAG pipelines: embeddings, vector search, "
+        "retrieval and reranking; prompt and context design, evaluation of model output",
+    ),
+    (
         "Agentic Engineering",
-        "Model Context Protocol (MCP) servers, multi-agent workflows, tool design for coding agents",
+        "AI agents with tool calling, Model Context Protocol (MCP) servers, multi-agent workflows, "
+        "LLM-driven automation of routine business processes",
     ),
     ("Languages", "Go, Java, PHP, C#, TypeScript, JavaScript, SQL / PL-SQL"),
     ("Frameworks", "Spring Boot, Node.js, .NET Core, Angular, React.js, Electron, Laravel"),
@@ -332,6 +339,9 @@ ATS_KEYWORDS = [
     "Microservices, distributed systems, event-driven architecture, system design, software architecture, "
     "high-load systems, scalability, REST API, API design, backend development, observability, monitoring, "
     "alerting, SDLC, technical leadership, cross-functional teams, mentoring, open source",
+    "AI architecture, LLM, large language models, generative AI, GenAI, RAG, retrieval-augmented generation, "
+    "embeddings, vector search, vector database, AI agents, agentic workflows, tool calling, function calling, "
+    "workflow automation, process automation, OpenAI API, Anthropic API",
     "Fintech, banking, mobile banking, payments, cross-border payments, Stripe, CRM, call center, data warehouse, "
     "Firebase, App Store Connect, Google Play Console, iOS, Android",
 ]
@@ -342,7 +352,8 @@ PDF_KEYWORDS = (
     "Docker, Kubernetes, CI/CD, Camunda, microservices, distributed systems, event-driven architecture, high-load, "
     "system design, REST API, observability, SDLC, fintech, banking, payments, Claude Code, Cursor, "
     "GitHub Copilot, agentic coding, AI-assisted development, Model Context Protocol, MCP server, "
-    "multi-agent workflows, coding agents"
+    "multi-agent workflows, coding agents, AI architecture, LLM, RAG, retrieval-augmented generation, "
+    "vector search, embeddings, AI agents, workflow automation"
 )
 
 
@@ -434,7 +445,7 @@ def build():
         bottomMargin=MARGIN_Y,
         title="Elkhan Isayev - CV",
         author="Elkhan Isayev",
-        subject="Senior Software Engineer - agentic coding workflows, MCP tooling, Go/Java backend, high-load systems",
+        subject="Senior Software Engineer / Tech Lead - AI architecture, RAG and agentic workflows, MCP tooling, Go/Java backend, high-load systems",
         keywords=PDF_KEYWORDS,
     )
     frame = Frame(
