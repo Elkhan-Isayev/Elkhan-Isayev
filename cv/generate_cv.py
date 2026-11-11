@@ -165,11 +165,11 @@ def job(company, meta, roles):
 # ------------------------------------------------------------------ content
 
 SUMMARY = (
-    "Senior Software Engineer with experience in the IT industry since 2016, specializing in high-load "
-    "and enterprise-grade systems. Proven track record leading technical direction, designing scalable "
-    "microservice architectures, and delivering reliable, maintainable solutions. Polyglot engineer "
-    "across Go, Java, and PHP who designs AI-powered systems (RAG pipelines, agentic workflows, and "
-    "automation of routine processes) and builds for coding agents: Erebus, an open-source MCP server "
+    "Senior engineer and former Technical Lead, in the IT industry since 2016, who takes solutions from "
+    "client requirements to production: bank integrations, B2B2C platforms, and payment systems delivered "
+    "together with partners and business stakeholders. Polyglot across Go, Java, and PHP with a background "
+    "in high-load microservice architectures. Designs AI-powered systems (RAG pipelines, agentic workflows, "
+    "and automation of routine processes) and builds for coding agents: Erebus, an open-source MCP server "
     "exposing 51 tools to AI agents."
 )
 
@@ -347,7 +347,7 @@ ATS_KEYWORDS = [
 ]
 
 PDF_KEYWORDS = (
-    "Senior Software Engineer, Backend Engineer, Technical Lead, Go, Golang, Java, Spring Boot, PHP, C#, .NET Core, "
+    "Forward Deployed Engineer, FDE, Senior Software Engineer, Backend Engineer, Technical Lead, Go, Golang, Java, Spring Boot, PHP, C#, .NET Core, "
     "TypeScript, Node.js, React, Angular, Electron, Apache Kafka, RabbitMQ, Redis, Elasticsearch, Oracle, PL/SQL, "
     "Docker, Kubernetes, CI/CD, Camunda, microservices, distributed systems, event-driven architecture, high-load, "
     "system design, REST API, observability, SDLC, fintech, banking, payments, Claude Code, Cursor, "
@@ -378,7 +378,7 @@ def draw_page(canvas, doc):
 def story():
     s = [
         Paragraph("ELKHAN ISAYEV", S_NAME),
-        Paragraph("Senior Software Engineer", S_HEADLINE),
+        Paragraph("Forward Deployed Engineer", S_HEADLINE),
         Paragraph(
             "Baku, Azerbaijan &nbsp;|&nbsp; %s &nbsp;|&nbsp; %s<br/>%s &nbsp;|&nbsp; %s"
             % (
@@ -445,7 +445,7 @@ def build():
         bottomMargin=MARGIN_Y,
         title="Elkhan Isayev - CV",
         author="Elkhan Isayev",
-        subject="Senior Software Engineer / Tech Lead - AI architecture, RAG and agentic workflows, MCP tooling, Go/Java backend, high-load systems",
+        subject="Forward Deployed Engineer / Senior Software Engineer / Tech Lead - AI architecture, RAG and agentic workflows, MCP tooling, Go/Java backend, high-load systems",
         keywords=PDF_KEYWORDS,
     )
     frame = Frame(
