@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Elkhan Isayev
 
-### 💻 Senior Software Engineer | Former Technical Lead | Distributed Systems & Agentic Engineering
+### 💻 Forward Deployed Engineer | Former Technical Lead | Distributed Systems & Agentic Engineering
 
 Building high-load and enterprise-grade systems since 2016 — mostly fintech and banking. I lead technical direction,
 design microservice architectures, and ship reliable, maintainable software across Go, Java and PHP.
